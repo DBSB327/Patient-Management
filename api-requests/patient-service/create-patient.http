@@ -1,0 +1,12 @@
+### Create a new patient
+POST http://localhost:8081/patients
+Content-Type: application/json
+
+{
+  "name" : "John Doe",
+  "email" : "asdasd@gmail.com",
+  "address": "123 man street",
+  "dateOfBirth": "1995-08-01",
+  "registeredDate": "2024-11-28"
+}
+###
