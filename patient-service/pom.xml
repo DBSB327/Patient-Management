@@ -122,6 +122,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 
 			<!-- PROTO -->
@@ -146,15 +154,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<profiles>
-		<profile>
-			<id>os-properties</id>
-			<properties>
-				<os.detected.name>linux</os.detected.name>
-				<os.detected.arch>x86_64</os.detected.arch>
-				<os.detected.classifier>linux-x86_64</os.detected.classifier>
-			</properties>
-		</profile>
-	</profiles>
-
 </project>
