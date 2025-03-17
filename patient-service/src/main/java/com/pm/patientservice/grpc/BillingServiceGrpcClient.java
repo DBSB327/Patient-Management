@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class BillingServiceGrpcClient {
 
@@ -19,7 +20,7 @@ public class BillingServiceGrpcClient {
 
     public BillingServiceGrpcClient(
             @Value("${billing.service.address:localhost}") String serverAddress,
-            @Value("${billing.service.grpc.port:9090}") int serverPort) {
+            @Value("${billing.service.grpc.port:9001}") int serverPort) {
 
         log.info("Connecting to Billing Service GRPC service at {}:{}",
                 serverAddress, serverPort);

@@ -2,9 +2,10 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 option java_package = "billing";
+option java_outer_classname = "BillingServiceOuterClass";
 
 service BillingService {
-  rpc CreateBillingAccount(BillingRequest) returns (BillingResponse);
+  rpc CreateBillingAccount (BillingRequest) returns (BillingResponse);
 }
 
 message BillingRequest {
@@ -13,7 +14,7 @@ message BillingRequest {
   string email = 3;
 }
 
-message BillingResponse{
+message BillingResponse {
   string accountId = 1;
   string status = 2;
 }
